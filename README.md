@@ -16,7 +16,7 @@ A powerful Streamlit application that allows users to upload datasets and ask an
 ## Project Structure
 
 ```
-ai_data_analyst/
+Ai_Data_Analyst/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py              # Main Streamlit application
@@ -35,7 +35,7 @@ ai_data_analyst/
 
 1. **Clone or navigate to the project directory**:
    ```bash
-   cd ai_data_analyst
+   cd Ai_Data_Analyst
    ```
 
 2. **Create a virtual environment** (recommended):
