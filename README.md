@@ -128,7 +128,3 @@ Edit `app/config.py` to customize:
 **File Loading Error**: Ensure your file is in CSV (.csv) or Excel (.xlsx, .xls) format and not larger than 50MB.
 
 **Code Execution Error**: The generated code runs in a sandbox. Some advanced operations may be restricted for security.
-
-## Author
-
-Shivam Attri
