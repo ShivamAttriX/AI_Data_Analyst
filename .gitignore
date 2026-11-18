@@ -1,0 +1,99 @@
+
+# ==========================================
+# AI Data Analyst Mode - .gitignore
+# ==========================================
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables and API keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.toml
+.streamlit/secrets.toml
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing and coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# User-uploaded datasets
+uploads/
+datasets/
+data/
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Generated reports and visualizations
+outputs/
+reports/
+generated/
+temp/
+tmp/
+*.log
+
+# Streamlit local configuration
+.streamlit/config.toml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.backup
+*~
+
+# Local AI model files
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Note: Keep README.md, requirements.txt,
+# .env.example, and application source code tracked.
