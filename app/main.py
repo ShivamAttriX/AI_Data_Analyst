@@ -27,7 +27,7 @@ from app.config import (
 from app.utils import DataLoader, get_gemini_client, DataAnalyzer
 
 
-# ── Page configuration ─────────────────────────────────────────────────────────
+# ── Page configuration ─────────────────────────────────────────────────────────\nst.set_page_config(\n    page_title=STREAMLIT_PAGE_TITLE,\n    page_icon=STREAMLIT_PAGE_ICON,\n    layout=STREAMLIT_LAYOUT,\n)\n\n# Dark mode toggle (adds a CSS class to root)\nif 'dark_mode' not in st.session_state:\n    st.session_state['dark_mode'] = True  # default to dark theme\n\n# Sidebar toggle\nwith st.sidebar:\n    st.session_state['dark_mode'] = st.checkbox('🌙 Dark mode', value=st.session_state['dark_mode'])\n\n# Inject CSS for dark mode toggle and fade-in animation\nmode_css = """<style>\n:root {\n    --bg: #050b14;\n    --bg-surface: #0d1526;\n    --bg-raised: #141f35;\n    --text-1: #eef2ff;\n    --text-2: #94a3b8;\n}\n[data-theme='light'] {\n    --bg: #ffffff;\n    --bg-surface: #f0f2f5;\n    --bg-raised: #e5e7eb;\n    --text-1: #111827;\n    --text-2: #374151;\n}\n.fade-in {\n    animation: fadeIn 0.6s ease-out forwards;\n    opacity: 0;\n}\n@keyframes fadeIn {\n    to {opacity:1;}\n}\n</style>"""\nst.markdown(mode_css, unsafe_allow_html=True)\n\n# Apply data-theme attribute based on toggle\nst.markdown(f"<script>document.documentElement.setAttribute('data-theme', '{'light' if not st.session_state['dark_mode'] else 'dark'}');</script>", unsafe_allow_html=True)\n
 st.set_page_config(
     page_title=STREAMLIT_PAGE_TITLE,
     page_icon=STREAMLIT_PAGE_ICON,
